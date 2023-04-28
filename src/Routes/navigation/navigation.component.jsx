@@ -14,7 +14,7 @@ const Navigation = () => {
       <Navbar>
         <NavbarBrand>Shreehari</NavbarBrand>
         <NavLinksContainer>
-          <NavLink to="/categories">Categories</NavLink>
+          <NavLink to="/products">Products</NavLink>
           <NavLink to="/auth">Get Started</NavLink>
         </NavLinksContainer>
       </Navbar>
