@@ -1,4 +1,11 @@
-import { getFirestore, collection, writeBatch, doc } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  writeBatch,
+  doc,
+  query,
+  getDocs,
+} from "firebase/firestore";
 
 import { initializeApp } from "firebase/app";
 
@@ -28,4 +35,13 @@ export const addCollectionsAndDocuments = async (
   });
   await batch.commit();
   console.log("Added products to the database successfully!!!!");
+};
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, "categories");
+  const q = query(collectionRef);
+  const querySnapShot = await getDocs(q);
+  return querySnapShot.docs.map((docSnapShot) => {
+    return docSnapShot.data();
+  });
 };
