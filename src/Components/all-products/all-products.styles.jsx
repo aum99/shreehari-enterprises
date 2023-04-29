@@ -7,6 +7,7 @@ export const ProductsContainer = styled.div`
   column-gap: 20px;
   row-gap: 20px;
   padding: 0 100px;
+  margin-top: 80px;
 `;
 
 export const Container = styled.div`
@@ -17,14 +18,18 @@ export const Container = styled.div`
 
 export const HeaderContainer = styled.div`
   text-align: center;
-  justify-content: center;
-  margin: 20px 5px;
+  margin-top: 80px;
+  height: 30%;
 `;
 
-export const CategoryLink = styled(Link)`
+export const CategoryButton = styled(Link)`
   border: 1px solid;
   padding: 5px;
   margin: 2px 5px;
   text-decoration: none;
   color: black;
+`;
+
+export const Header = styled.h1`
+  margin-bottom: 50px;
 `;

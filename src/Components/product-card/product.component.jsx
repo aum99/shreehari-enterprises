@@ -1,4 +1,4 @@
-import { ProductContainer, Name, Price } from "./product.styles";
+import { ProductContainer, Name, Price, Button } from "./product.styles";
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
@@ -7,6 +7,7 @@ const ProductCard = ({ product }) => {
       <img src={imageUrl} alt={name}></img>
       <Name>{name}</Name>
       <Price>Rs.{price}</Price>
+      <Button>ADD TO CART</Button>
     </ProductContainer>
   );
 };

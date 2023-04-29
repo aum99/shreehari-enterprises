@@ -40,3 +40,19 @@ export const HomeLink = styled(Link)`
   color: black;
   font-weight: 600;
 `;
+
+export const CategoryButton = styled(Link)`
+  border: 2px solid #ced4da;
+  padding: 5px;
+  margin: 2px 5px;
+  text-decoration: none;
+  color: black;
+  :hover {
+    border-color: #000000;
+  }
+`;
+
+export const CategoryButtonsContainer = styled.div`
+  margin-top: 20px;
+  text-align: center;
+`;

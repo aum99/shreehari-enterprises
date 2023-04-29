@@ -9,6 +9,8 @@ import {
   Container,
   ProductsContainer,
   Heading,
+  CategoryButtonsContainer,
+  CategoryButton,
   HomeLink,
 } from "./category.styles";
 
@@ -28,6 +30,11 @@ const Category = () => {
       <HeaderContainer>
         <HomeLink to="/products"> &lt; Home</HomeLink>
         <Heading>{category}</Heading>
+        <CategoryButtonsContainer>
+          {Object.keys(categoriesMap).map((title) => (
+            <CategoryButton to={`/products/${title}`}>{title}</CategoryButton>
+          ))}
+        </CategoryButtonsContainer>
       </HeaderContainer>
       <Container>
         <ProductsContainer>

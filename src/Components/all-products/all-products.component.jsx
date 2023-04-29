@@ -6,8 +6,9 @@ import { selectCategoriesMap } from "../../store/categories/categories.selector"
 import {
   ProductsContainer,
   Container,
-  CategoryLink,
+  CategoryButton,
   HeaderContainer,
+  Header,
 } from "./all-products.styles";
 
 import ProductCard from "../product-card/product.component";
@@ -17,9 +18,9 @@ const AllProducts = () => {
   return (
     <Fragment>
       <HeaderContainer>
-        <h1>All Products</h1>
+        <Header>All Products</Header>
         {Object.keys(categoriesMap).map((title) => (
-          <CategoryLink to={`/products/${title}`}>{title}</CategoryLink>
+          <CategoryButton to={`/products/${title}`}>{title}</CategoryButton>
         ))}
       </HeaderContainer>
       <Container>
