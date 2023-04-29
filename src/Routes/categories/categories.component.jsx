@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 // import SHOP_DATA from "../../shopData";
 
 import AllProducts from "../../Components/all-products/all-products.component";
-import Category from "../../Routes/category/category.component";
+import Category from "../../Components/category/category.component";
 
 import { fetchCategoriesStart } from "../../store/categories/categories.action";
 

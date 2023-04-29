@@ -5,17 +5,23 @@ import Home from "./Routes/home/home.component";
 import Categories from "./Routes/categories/categories.component";
 import Auth from "./Routes/authentication/authentication.component";
 
+import Footer from "./Components/footer/footer.component";
+
 import "./App.css";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="products/*" element={<Categories />} />
-        <Route path="auth" element={<Auth />} />
-      </Route>
-    </Routes>
+    <Fragment>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="products/*" element={<Categories />} />
+          <Route path="auth" element={<Auth />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </Fragment>
   );
 }
 

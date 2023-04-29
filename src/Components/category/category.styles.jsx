@@ -16,9 +16,9 @@ export const Container = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
-  text-align: center;
-  justify-content: center;
   margin: 20px 5px;
+  padding: 0 100px;
+  margin-bottom: 65px;
 `;
 
 export const CategoryLink = styled(Link)`
@@ -27,4 +27,16 @@ export const CategoryLink = styled(Link)`
   margin: 2px 5px;
   text-decoration: none;
   color: black;
+`;
+
+export const Heading = styled.h1`
+  display: inline-block;
+  margin: 0;
+  margin-left: 40%;
+`;
+
+export const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
 `;
