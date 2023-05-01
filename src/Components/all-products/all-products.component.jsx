@@ -18,7 +18,7 @@ const AllProducts = () => {
   return (
     <Fragment>
       <HeaderContainer>
-        <Header>All Products</Header>
+        <Header>ALL</Header>
         {Object.keys(categoriesMap).map((title) => (
           <CategoryButton to={`/products/${title}`}>{title}</CategoryButton>
         ))}

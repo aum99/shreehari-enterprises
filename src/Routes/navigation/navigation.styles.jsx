@@ -1,26 +1,32 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ReactComponent as BrandLogo } from "../../assets/Logo-500x500-px.svg";
 
 export const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
-  margin: 5px 10px;
+  padding: 1% 5%;
+  margin: 0 10px;
+  border-bottom: 2px solid #000;
+  position: fixed;
+  top: 0;
+  width: 90%;
+  background-color: #ffffff;
+  border-width: 50%;
+`;
+
+export const Logo = styled(BrandLogo)`
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
 `;
 
 export const NavLinksContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
-`;
-
-export const NavbarBrand = styled(Link)`
-  font-size: large;
-  text-align: left;
-  text-decoration: none;
-  color: black;
+  width: 50%;
 `;
 
 export const NavLink = styled(Link)`
@@ -28,4 +34,12 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
   margin: 5px;
+`;
+
+export const BrandImage = styled.img`
+  background-image: url("../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
 `;

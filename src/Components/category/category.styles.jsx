@@ -19,6 +19,7 @@ export const HeaderContainer = styled.div`
   margin: 20px 5px;
   padding: 0 100px;
   margin-bottom: 65px;
+  margin-top: 150px;
 `;
 
 export const CategoryLink = styled(Link)`
@@ -33,6 +34,7 @@ export const Heading = styled.h1`
   display: inline-block;
   margin: 0;
   margin-left: 40%;
+  margin-bottom: 50px;
 `;
 
 export const HomeLink = styled(Link)`

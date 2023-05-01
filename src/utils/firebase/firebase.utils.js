@@ -5,7 +5,15 @@ import {
   doc,
   query,
   getDocs,
+  getDoc,
+  setDoc,
 } from "firebase/firestore";
+
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 import { initializeApp } from "firebase/app";
 
@@ -44,4 +52,31 @@ export const getCategoriesAndDocuments = async () => {
   return querySnapShot.docs.map((docSnapShot) => {
     return docSnapShot.data();
   });
+};
+
+export const createUserDoc = async (userAuth, additionalInformation = {}) => {
+  const userDoc = doc(db, "users", userAuth.uid);
+  const userSnapshot = await getDoc(userDoc);
+  if (!userSnapshot.exists()) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+    try {
+      await setDoc(userDoc, {
+        displayName,
+        email,
+        createdAt,
+        ...additionalInformation,
+      });
+    } catch (error) {
+      console.log("There was an error creating user doc :(", error);
+    }
+  }
+  return userSnapshot;
+};
+
+export const auth = getAuth();
+
+export const createUserAuth = async (email, password) => {
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
 };

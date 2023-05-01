@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
+import { Fragment, useCallback } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
@@ -7,19 +7,18 @@ import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import CartIcon from "../../Components/cart-icon/cart-icon.component";
 import CartDropDown from "../../Components/cart-dropdown/cart-dropdown.component";
 
-import {
-  Navbar,
-  NavLinksContainer,
-  NavbarBrand,
-  NavLink,
-} from "./navigation.styles";
+import { Navbar, NavLinksContainer, NavLink, Logo } from "./navigation.styles";
 
 const Navigation = () => {
   const isCartOpen = useSelector(selectIsCartOpen);
+  const navigate = useNavigate("/");
+  const navigateToHome = useCallback(() => {
+    navigate("/");
+  });
   return (
     <Fragment>
       <Navbar>
-        <NavbarBrand>Shreehari</NavbarBrand>
+        <Logo onClick={navigateToHome} />
         <NavLinksContainer>
           <NavLink to="/products">Products</NavLink>
           <NavLink to="/auth">Get Started</NavLink>

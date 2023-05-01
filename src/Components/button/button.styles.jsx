@@ -1,38 +1,6 @@
 import styled from "styled-components";
 
-export const ProductContainer = styled.div`
-  width: 90%;
-  height: 400px;
-  border: 2px solid #ced4da;
-  border-radius: 10px;
-  padding: 10px;
-  display: inline-block;
-  text-align: center;
-  img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    margin-bottom: 5px;
-    border-radius: 10px;
-  }
-  :hover {
-    border-color: #000000;
-  }
-`;
-
-export const Name = styled.div`
-  font-size: medium;
-  font-weight: 400;
-  margin: 5px;
-`;
-
-export const Price = styled.div`
-  font-size: large;
-  font-weight: 800;
-  margin: 5px;
-`;
-
-export const Button = styled.button`
+export const CustomButton = styled.button`
   appearance: none;
   background-color: transparent;
   border: 2px solid #1a1a1a;
