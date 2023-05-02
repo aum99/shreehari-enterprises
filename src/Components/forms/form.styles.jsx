@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SignUpContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -19,7 +19,7 @@ export const Description = styled.p`
   margin-bottom: 20px;
 `;
 
-export const SignUpForm = styled.form`
+export const Form = styled.form`
   display: flex;
   row-gap: 15px;
   flex-direction: column;

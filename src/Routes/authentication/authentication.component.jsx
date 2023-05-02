@@ -1,13 +1,16 @@
+import { Fragment } from "react";
+
 import SignUp from "../../Components/forms/sign-up.component";
+import SignIn from "../../Components/forms/sign-in.component";
 
 import { Container } from "./authentication.styles";
-import { Fragment } from "react";
 
 const Auth = () => {
   return (
     <Fragment>
       <Container>
         <SignUp />
+        <SignIn />
       </Container>
     </Fragment>
   );
