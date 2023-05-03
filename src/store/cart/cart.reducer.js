@@ -2,6 +2,7 @@ import { CART_ACTION_TYPES } from "./cart.types";
 
 const INITIAL_STATE = {
   isCartOpen: false,
+  cartStore: [],
 };
 
 export const cartRedcuer = (state = INITIAL_STATE, action = {}) => {
@@ -11,6 +12,11 @@ export const cartRedcuer = (state = INITIAL_STATE, action = {}) => {
       return {
         ...state,
         isCartOpen: payload,
+      };
+    case CART_ACTION_TYPES.SET_CART_ITEMS:
+      return {
+        ...state,
+        cartStore: payload,
       };
     default:
       return state;

@@ -16,7 +16,7 @@ const Navigation = () => {
   const isCartOpen = useSelector(selectIsCartOpen);
   const currentUser = useSelector(selectCurrentUser);
 
-  const navigate = useNavigate("/");
+  const navigate = useNavigate();
   const navigateToHome = useCallback(() => {
     navigate("/");
   });
