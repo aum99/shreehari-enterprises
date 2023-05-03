@@ -12,4 +12,18 @@ export const CartDropDownContainer = styled.div`
   top: 100px;
   right: 150px;
   z-index: 5;
+  overflow: scroll;
+`;
+
+export const EmptyMessage = styled.span`
+  font-size: 18px;
+  margin: 50px auto;
+`;
+
+export const CartItems = styled.div`
+  height: 300px;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  overflow: scroll;
 `;

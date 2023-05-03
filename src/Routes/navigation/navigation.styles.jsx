@@ -14,6 +14,7 @@ export const Navbar = styled.div`
   width: 90%;
   background-color: #ffffff;
   border-width: 50%;
+  z-index: 950;
 `;
 
 export const Logo = styled(BrandLogo)`
@@ -34,12 +35,4 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
   margin: 5px;
-`;
-
-export const BrandImage = styled.img`
-  background-image: url("../../assets/logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100px;
-  width: 100px;
 `;

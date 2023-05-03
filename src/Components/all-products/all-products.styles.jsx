@@ -8,6 +8,7 @@ export const ProductsContainer = styled.div`
   row-gap: 20px;
   padding: 0 100px;
   margin-top: 70px;
+  width: 85%;
 `;
 
 export const Container = styled.div`

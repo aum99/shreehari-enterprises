@@ -5,6 +5,7 @@ import Home from "./Routes/home/home.component";
 import Categories from "./Routes/categories/categories.component";
 import Auth from "./Routes/authentication/authentication.component";
 import CheckOut from "./Routes/checkout/checkout.component";
+import Footer from "./Components/footer/footer.component";
 
 import "./App.css";
 import { Fragment } from "react";
@@ -20,6 +21,7 @@ function App() {
           <Route path="checkout" element={<CheckOut />} />
         </Route>
       </Routes>
+      <Footer />
     </Fragment>
   );
 }
