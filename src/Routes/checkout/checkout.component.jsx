@@ -7,7 +7,11 @@ import {
 
 import CheckOutItem from "../../Components/checkout-item/checkout-item.component";
 
-import { CheckOutContainer } from "./checkout.styles";
+import {
+  CheckOutContainer,
+  CheckoutHeader,
+  ColumnHeader,
+} from "./checkout.styles";
 
 const CheckOut = () => {
   const cartItems = useSelector(selectCartStore);
@@ -15,10 +19,16 @@ const CheckOut = () => {
   if (cartItems) {
     return (
       <CheckOutContainer>
-        <h1>Welcome to the checkout page</h1>
+        <CheckoutHeader>
+          <ColumnHeader>Product</ColumnHeader>
+          <ColumnHeader>Quantity</ColumnHeader>
+          <ColumnHeader>Price</ColumnHeader>
+          <ColumnHeader>Remove</ColumnHeader>
+        </CheckoutHeader>
         {cartItems.map((item) => (
           <CheckOutItem item={item} key={item.id} />
         ))}
+
         <h2>Total: {cartTotal}</h2>
       </CheckOutContainer>
     );
