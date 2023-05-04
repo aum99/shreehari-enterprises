@@ -1,3 +1,8 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import { fetchCategoriesStart } from "../../store/categories/categories.action";
+
 import HeroItem from "../../Components/hero-item/hero-item.component";
 import PopularProducts from "../../Components/popular-products/popular-products.component";
 import BannerContainer from "../../Components/banner-container/banner-container.component";
@@ -42,6 +47,10 @@ const categories = [
   },
 ];
 const Home = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchCategoriesStart());
+  }, []);
   return (
     <HomeContainer>
       <HeroContainer>
