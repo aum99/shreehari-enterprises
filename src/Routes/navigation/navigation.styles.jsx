@@ -6,14 +6,12 @@ export const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 5%;
-  margin: 0 10px;
+  padding: 0 7%;
   border-bottom: 2px solid #000;
   position: fixed;
   top: 0;
   width: 90%;
   background-color: #ffffff;
-  border-width: 50%;
   z-index: 950;
 `;
 
@@ -35,4 +33,12 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
   margin: 5px;
+`;
+
+export const BrandImage = styled.img`
+  background-image: url("../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
 `;

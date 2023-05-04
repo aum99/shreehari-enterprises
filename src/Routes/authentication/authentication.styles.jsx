@@ -6,3 +6,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
 `;
+export const WelcomeHeader = styled.h1`
+  font-size: x-large;
+`;

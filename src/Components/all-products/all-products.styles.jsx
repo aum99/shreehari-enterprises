@@ -24,11 +24,14 @@ export const HeaderContainer = styled.div`
 `;
 
 export const CategoryButton = styled(Link)`
-  border: 1px solid;
+  border: 2px solid #ced4da;
   padding: 5px;
   margin: 2px 5px;
   text-decoration: none;
   color: black;
+  :hover {
+    border-color: #000000;
+  }
 `;
 
 export const Header = styled.h1`

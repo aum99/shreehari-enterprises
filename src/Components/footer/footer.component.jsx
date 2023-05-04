@@ -1,9 +1,20 @@
-import { FooterContainer } from "./footer.styles";
+import {
+  FooterContainer,
+  CtaButton,
+  Signature,
+  FooterLinks,
+} from "./footer.styles";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <h1>this is footer</h1>
+      <FooterLinks>
+        <CtaButton>About</CtaButton>
+        <CtaButton>FAQs</CtaButton>
+        <CtaButton>Contact Us</CtaButton>
+        <CtaButton>Store locator</CtaButton>
+      </FooterLinks>
+      <Signature>Designed By The Amigos</Signature>
     </FooterContainer>
   );
 };

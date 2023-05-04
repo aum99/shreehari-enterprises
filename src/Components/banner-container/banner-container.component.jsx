@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../product-card/product.styles";
 import {
   BannerImage,
@@ -8,6 +9,10 @@ import {
 } from "./banner-container.styles";
 
 const BannerContainer = () => {
+  const navigate = useNavigate();
+  const NavigateToProducts = () => {
+    navigate("/products");
+  };
   return (
     <Container>
       <BannerImage />
@@ -18,7 +23,7 @@ const BannerContainer = () => {
           high quailty material as well as equipments
         </BannerDescription>
         <ButtonContainer>
-          <Button>Explore</Button>
+          <Button onClick={NavigateToProducts}>Explore</Button>
         </ButtonContainer>
       </BannerText>
     </Container>

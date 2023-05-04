@@ -1,16 +1,26 @@
 import { Fragment } from "react";
+import { useSelector } from "react-redux";
+
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 import SignUp from "../../Components/forms/sign-up.component";
 import SignIn from "../../Components/forms/sign-in.component";
 
-import { Container } from "./authentication.styles";
+import { Container, WelcomeHeader } from "./authentication.styles";
 
 const Auth = () => {
+  const currentUser = useSelector(selectCurrentUser);
   return (
     <Fragment>
       <Container>
-        <SignUp />
-        <SignIn />
+        {!currentUser ? (
+          <Fragment>
+            <SignUp />
+            <SignIn />
+          </Fragment>
+        ) : (
+          <WelcomeHeader>Welcome {currentUser.displayName} !</WelcomeHeader>
+        )}
       </Container>
     </Fragment>
   );

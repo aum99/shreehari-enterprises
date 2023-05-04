@@ -9,8 +9,8 @@ export const CartDropDownContainer = styled.div`
   padding: 20px;
   border: 1px solid black;
   background-color: white;
-  top: 100px;
-  right: 150px;
+  top: 80px;
+  right: 180px;
   z-index: 5;
   overflow: scroll;
 `;
